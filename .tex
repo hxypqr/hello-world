@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+\title{Hausdorff Measure Of Nodal Sets}
+\author{Hu xiyu}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proof}{proof}
+\begin{document}
+\maketitle
+\section{basic seting}
+Let $(M,g)$ be a compact $C^\infty$ Riemannian manifold of dimesion $n$, let $\phi_{\lambda}$ be an $L^2$- normalized eigenfunction of the Laplacian:\\
+
+
+\[\Delta \phi_{\lambda} = −\lambda^2 \phi_{\lambda}\],
+
+
+and let:\\
+
+\[N \phi_{\lambda} =\{x:\phi_{\lambda}(x)=0\}\]
+
+be its nodal hypersurface. Let $H^{n−1}(N\phi_{\lambda} )$ denote its $(n-1)$-dimensional Riemannian hypersurface measure. In this note we prove:
+\begin{theorem}
+
+	for ang $C^\infty$ metric $g$,there exists a constant $C_g > 0$ so that:\\
+	\[ H^{n-1}(N_{\phi_{\lambda}}) \leq C_g \lambda^{n}\]
+\end{theorem}
+
+\section{a crucial identity}
+proof of theorem 1 is based on following identity:\\
+\begin{theorem}
+for any smooth Riemannn manifold $M$,we have,
+	\[ \lambda^2\int_{M}|\phi_{\lambda}|dV = 2\int_{N_{\phi_{\lambda}}} |\nabla\phi_{\lambda}|dS\]
+	moreover,$\forall f \in C^2(M)$,
+	\[\int_M(\Delta+\lambda^2)f \vert\phi_{\lambda}\vert dV=2\int_{N_{\phi_{\lambda}}} \vert\nabla\phi_{\lambda}\vert dS\]
+	\end{theorem}
+	\begin{proof}
+	observed that,
+\[M=N_{\phi_{\lambda}}^+ \cup N_{\phi_{\lambda}} \cup N_{\phi_{\lambda}}^-\]
+on $N_{\phi_{\lambda}}^+$,use divergence theorem:\\
+\begin{eqnarray*}
+	\int_M(\Delta+\lambda^2)f \phi_{\lambda} dV&=&\int_M(\Delta+\lambda^2)\phi_{\lambda}f dV+\int_{\partial M}	-g(\upsilon,\phi_{\lambda}\nabla f)dS+\int_{\partial M} g(\upsilon,f\nabla\phi_{\lambda})dS\\
+	&=&\int_{\partial M} g(\upsilon,f\nabla\phi_{\lambda})	\\
+	&=&\int_{\partial M} f\phi_{\lambda}dS
+\end{eqnarray*}
+the same identity is true on $N_{\phi_{\lambda}}^-$\\
+so we have:\\
+\[\int_M(\Delta+\lambda^2)f \vert\phi_{\lambda}\vert dV=2\int_{N_{\phi_{\lambda}}} \vert\nabla\phi_{\lambda}\vert dS\]
+
+\section{Estimate hausdorff measure of nodal sets}
+take $f=1$ in theorem 2,we have:\\
+\[\lambda^2\int_M\vert\phi_{\lambda}\vert dV=2\int_{N_{\phi_{\lambda}}} \vert\nabla\phi_{\lambda}\vert dS\]
+so to get estimate hausdorff measure of nodal sets,we need to estimate:
+$||\phi_{\lambda}||_1$,$||\nabla\phi_{\lambda}||_{\infty}$ ,this two guys are easy to get good estumate....and we will get a lower bound estimate of measure of nodal set:
+\[H^{n-1}(N_{\phi_{\lambda}}) \geq \frac{\lambda^2||\phi_{\lambda}||_1}{2||\nabla\phi_{\lambda}||_{\infty}}\]
+
+
+\section{Estimate:
+$||\phi_{\lambda}||_1$,$||\nabla\phi_{\lambda}||_{\infty}$}
+$||\phi_{\lambda}||_1$:\\
+\\
+normalized $L_2$ norm of $\phi_{\lambda}$
+\\
+$||\nabla\phi_{\lambda}||_{\infty}$:\\
+\\
+we have a yau types gradients estimate
+
+\section{estimate upper bound of measure}
+to get upper bound estimate,from identity we need to estimate:$||\phi_{\lambda}||_1$,$||\nabla\phi_{\lambda}||_{\infty}$,and we will get:
+\[H^{n-1}(N_{\phi_{\lambda}}) \leq \frac{\lambda^2||\phi_{\lambda}||_1}{2\int_{N_{\phi_{\lambda}}} |\nabla\phi_{\lambda}|dS}\]
+
+
+
+
+
+
+
+
+
+
+
+
+\end{proof}
+
+
+\end{document}
